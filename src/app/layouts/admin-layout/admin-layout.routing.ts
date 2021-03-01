@@ -11,6 +11,7 @@ import { MuroDelDesarrolloComponent } from 'src/app/pages/muro-del-desarrollo/mu
 import { EventosComponent } from 'src/app/pages/eventos/eventos.component';
 import { LoQueTenemosParaTiComponent } from 'src/app/pages/lo-que-tenemos-para-ti/lo-que-tenemos-para-ti.component';
 import { SaludComponent } from 'src/app/pages/salud/salud.component';
+import { UsuariosComponent } from 'src/app/pages/usuarios/usuarios.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'de_manteles_largos',      component: DeMantelesLargosComponent },
@@ -19,6 +20,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'eventos',      component: EventosComponent },
     { path: 'lo_que_tenemos_para_ti',      component: LoQueTenemosParaTiComponent },
     { path: 'salud',      component: SaludComponent },
+
+    { path: 'usuarios',      component: UsuariosComponent },
 
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
