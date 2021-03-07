@@ -10,7 +10,7 @@
       <h1>Secciones</h1>
     </a>
     <!-- User -->
-    <ul class="nav align-items-center d-md-none">
+    <!-- <ul class="nav align-items-center d-md-none">
       <li class="nav-item" ngbDropdown placement="bottom-right">
         <a class="nav-link nav-link-icon" role="button" ngbDropdownToggle>
           <i class="ni ni-bell-55"></i>
@@ -57,17 +57,15 @@
           </a>
         </div>
       </li>
-    </ul>
+    </ul> -->
     <!-- Collapse -->
     <div class="collapse navbar-collapse"  [ngbCollapse]="isCollapsed" id="sidenav-collapse-main">
       <!-- Collapse header -->
       <div class="navbar-collapse-header d-md-none">
         <div class="row">
-          <div class="col-6 collapse-brand">
             <a  routerLinkActive="active" [routerLink]="['/dashboard']">
               <h1>Secciones</h1>
             </a>
-          </div>
           <div class="col-6 collapse-close">
             <button type="button" class="navbar-toggler" (click)="isCollapsed=!isCollapsed">
               <span></span>
@@ -94,6 +92,57 @@
                   <i class="ni {{menuItem.icon}}"></i>
                   {{menuItem.title}}
               </a>
+          </li>
+          <li class="navbar-nav">
+            <mat-accordion>
+              <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <li class="nav-item">
+                      <a routerLinkActive="active" class="nav-link">
+                        <i class="ni ni-ambulance"></i>
+                        Salud
+                      </a>
+                    </li>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="container ">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                      <a routerLinkActive="active" [routerLink]="['/informacion_que_cura']" class=" nav-link">
+                        Información que Cura
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a routerLinkActive="active" [routerLink]="['/salud_mes']" class=" nav-link">
+                        ¿Qué onda con la salud en marzo? 
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a routerLinkActive="active" [routerLink]="['/para_que_te_animes']" class=" nav-link">
+                        Para que te Animes 
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a routerLinkActive="active" [routerLink]="['/convenios']" class=" nav-link">
+                        Ahórrale con los Convenios 
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a routerLinkActive="active" [routerLink]="['/infografia']" class=" nav-link">
+                        Lo$ de cajón 
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a routerLinkActive="active" [routerLink]="['/linea_covid']" class=" nav-link">
+                        Si nos necesitas... ¡CONTACTANOS! 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </mat-expansion-panel>
+              
+            </mat-accordion>
           </li>
       </ul>
       <!-- Divider -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 declare interface RouteInfo {
@@ -8,12 +8,12 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/de_manteles_largos', title: 'De manteles largos',  icon: 'ni-calendar-grid-58 text-primary', class: '' },
-    { path: '/tu_historia_nuestra_historia', title: 'Tu historia nuestra historia',  icon: 'ni-book-bookmark text-primary', class: '' },
-    { path: '/muro_del_desarrollo', title: 'Muro del desarrollo',  icon: 'ni-archive-2 text-primary', class: '' },
-    { path: '/eventos', title: 'Eventos',  icon: 'ni-badge text-primary', class: '' },
-    { path: '/lo_que_tenemos_para_ti', title: 'Lo que tenemos para ti',  icon: 'ni-album-2 text-primary', class: '' },
-    { path: '/salud', title: 'Salud',  icon: 'ni-ambulance text-primary', class: '' },
+    { path: '/de_manteles_largos', title: 'De manteles largos',  icon: 'ni-calendar-grid-58', class: '' },
+    { path: '/tu_historia_nuestra_historia', title: 'Tu historia nuestra historia',  icon: 'ni-book-bookmark', class: '' },
+    { path: '/muro_del_desarrollo', title: 'Muro del desarrollo',  icon: 'ni-archive-2', class: '' },
+    { path: '/eventos', title: 'Eventos',  icon: 'ni-badge', class: '' },
+    { path: '/lo_que_tenemos_para_ti', title: 'Lo que tenemos para ti',  icon: 'ni-album-2', class: '' },
+    // { path: '/salud', title: 'Salud',  icon: 'ni-ambulance text-primary', class: '' },
 
     // { path: '/dashboard', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '' },
     // { path: '/icons', title: 'Icons',  icon:'ni-planet text-blue', class: '' },
@@ -34,6 +34,7 @@ export const ROUTES_USER: RouteInfo[] = [
   // { path: '/salud', title: 'Salud',  icon: 'ni-ambulance', class: '' },
 
 ];
+
 
 @Component({
   selector: 'app-sidebar',
