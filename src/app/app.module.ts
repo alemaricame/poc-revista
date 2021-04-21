@@ -24,6 +24,7 @@ import { InfografiaComponent } from './pages/infografia/infografia.component';
 import { AquiEstamosComponent } from './pages/aqui-estamos/aqui-estamos.component';
 import { LineaCovidComponent } from './pages/linea-covid/linea-covid.component';
 import { LosDeCajonComponent } from './pages/los-de-cajon/los-de-cajon.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { LosDeCajonComponent } from './pages/los-de-cajon/los-de-cajon.component
     MatTableModule,
     MatInputModule,
     MatButtonModule,
+    ToastrModule.forRoot(),
     
   ],
   declarations: [

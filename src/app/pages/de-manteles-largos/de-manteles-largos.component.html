@@ -12,22 +12,15 @@
                 Cumpleaños del mes
               </ng-template>
               <ng-template ngbTabContent class="mt-5">
-                <h3 class="mt-5">Personaliza el mensaje de cumpleaños que se enviará a los empleados</h3>
+                <h3 class="mt-5">Esté es el vídeo que se registro para cumpleaños</h3>
                 <div class="container mt-5">
                   <div class="row">
-                    <div class="col">
-                      <h5>Agrega aquí el vídeo que deseas enviar</h5>
-                      <input type="file" name="" id="">
-                    </div>
-                    <div class="col">
-                      <h5>Agrega aquí el texto que deseas enviar en el mensaje de cumpleaños</h5>
-                      <textarea name="" id="" cols="50" rows="10"></textarea>
-                    </div>
+                    <iframe width="750" height="750" src="https://androidrest13.000webhostapp.com/oxxo.mp4" frameborder="0" allow="accelerometer;" allowfullscreen></iframe>
                   </div>
+                </div>
 
-                  <div class="row d-flex justify-content-end">
-                    <button class="btn btn-outline" type="submit">Guardar</button>
-                  </div>
+                <div class="mt-5">
+
                 </div>
               </ng-template>
             </ngb-tab>
@@ -41,18 +34,43 @@
                   <div class="row">
                     <div class="col">
                       <h5>Agrega aquí la imagen del equipo</h5>
-                      <input type="file" name="" id="">
+                      <input  (change)="handleUpload($event)" type="file" name="" id="">
                     </div>
                     <div class="col">
                       <h5>Agrega aquí el texto que deseas añadir para esta sección</h5>
-                      <textarea name="" id="" cols="50" rows="10"></textarea>
+                      <textarea [(ngModel)]="text_team" name="" id="" cols="50" rows="10"></textarea>
                     </div>
                   </div>
 
                   <div class="row d-flex justify-content-end">
-                    <button class="btn btn-outline" type="submit">Guardar</button>
+                    <button (click)="guardarEquipo()" class="btn btn-outline" type="submit">Guardar</button>
                   </div>
                 </div>
+
+                <!-- <div class="row mb-3">
+                  <div class="col">
+                    <img src="{{mejorEquipo.image}}" alt="">
+                  </div>
+                  <div class="col">
+                    <h4>{{mejorEquipo.text}}</h4>
+                  </div>
+                  <div class="col">
+                    <h4>{{dato.descripcion}}</h4> 
+                  </div>
+                  <div class="col-auto">
+                    <div ngbDropdown placement="bottom-right">
+                      <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="javascript:void(0)">Editar</a>
+                        <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
+                      </div>
+                    </div>
+                </div>
+              </div> -->
+
+               
               </ng-template>
             </ngb-tab>
             <ngb-tab>
@@ -70,28 +88,28 @@
                         <div class="col">
                           <div class="form-group">
                             <label for="">Imagen de referencia: </label>
-                            <input class="form-control" type="file" name="" id=""> 
+                            <input (change)="handleUploadExcelencia($event)" class="form-control" type="file" name="" id=""> 
                           </div>
                         </div>
                         <div class="col">
                           <div class="form-group">
                             <label for="">Nombre del empleado: </label>
-                            <input class="form-control" type="text" name="" id="">
+                            <input [(ngModel)]="nombreExcelencia" [ngModelOptions]="{standalone: true}" class="form-control" type="text" id="">
                           </div>
                         </div>
                         <div class="col">
                           <div class="form-group">
                             <label for="">Descripción: </label>
-                            <textarea class="form-control" name="" id="" cols="50" rows="5"></textarea>
+                            <textarea [(ngModel)]="descripcionExcelencia" [ngModelOptions]="{standalone: true}" class="form-control" name="" id="" cols="50" rows="5"></textarea>
                           </div>
                         </div>
                       </div>
                     </form>
                     <div class="d-flex justify-content-end">
-                      <button type="submit" class="btn btn-outline-dark">Guardar</button>
+                      <button (click)="guardarExcelencia()" type="submit" class="btn btn-outline-dark">Guardar</button>
                     </div>
                   </div>
-                  <div class="container mt-5">
+                  <!-- <div class="container mt-5">
                     <div class="row">
                       <div class="col">
                         <h4>Imagen</h4>
@@ -103,8 +121,8 @@
                         <h4>Información</h4>
                       </div>
                     </div>
-                  </div>
-
+                  </div> -->
+<!-- 
                   <div class="row mb-3" *ngFor="let dato of datos">
                     <div class="col">
                       <img src="{{dato.imagen}}" alt="">
@@ -126,7 +144,7 @@
                         </div>
                       </div>
                   </div>
-                </div>
+                </div> -->
               </ng-template>
             </ngb-tab>
           </ngb-tabset>
