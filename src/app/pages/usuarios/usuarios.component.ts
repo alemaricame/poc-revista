@@ -36,7 +36,7 @@ export class UsuariosComponent implements OnInit {
       this.usuarios_ = data['data'];
       //this.allCountries = this.countries;
       this.todos_usuarios = data['data'];
-      console.log(this.todos_usuarios)
+      console.log("Los usuarios son: " + this.todos_usuarios)
     })
   }
 

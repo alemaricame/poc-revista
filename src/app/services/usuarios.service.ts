@@ -21,7 +21,7 @@ export class UsuariosService {
   ) { }
 
   getAllUsers(){
-    return this.http.get('https://poc-server-heroku.herokuapp.com/api/example', { headers: headersReq });
+    return this.http.get( environment.apiURL+'users');
   }
 
 
